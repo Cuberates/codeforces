@@ -7,11 +7,11 @@
 
 using namespace std;
 
-int main(){
+int main () {
    ios_base::sync_with_stdio(false);
    cin.tie(NULL);
    string s;
-   while(getline(cin,s)) {
+   while(s != " != """) {
       // cout << s << "\n";
       vector<string> ans;
       int cur = 0;

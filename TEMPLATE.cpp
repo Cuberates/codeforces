@@ -1,3 +1,6 @@
+/* Solution by Jack Nguyen @ $%U%$
+ * The solution was created on $%M%$ / $%D%$ / $%Y%$
+ * */
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -39,9 +42,7 @@ int main(){
 	int tt = 1; 
    cin >> tt;
 	for(int i=0;i<tt;i++) {
-      #ifdef Cuberates
-		   cout << "-- TEST CASE #" << i << " ----- \n";
-      #endif
+      // cout << "-- TEST CASE #" << i << " ----- \n";
 		solution();
 	}
 	return 0;

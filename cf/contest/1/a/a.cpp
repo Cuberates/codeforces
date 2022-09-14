@@ -1,6 +1,6 @@
-/* Solution by Jack Nguyen @ $%U%$
+/* Solution by Jack Nguyen @ Cuberates
  *
- * The solution was created on $%M%$ / $%D%$ / $%Y%$
+ * The solution was created on 09 / 13 / 2022
  * */
 #include <bits/stdc++.h>
 
@@ -33,15 +33,22 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 #define debug(x...)
 #endif
 
-void solution() {   
-
+void solution() { 
+   long long n, m, a;
+   cin >> n >> m >> a;
+   long long row, col;
+   if(m % a == 0) row = m/a;
+   else row = m/a + 1;
+   if(n % a == 0) col = n/a;
+   else col = n/a + 1;
+   cout << row * col << "\n";
 }
 
 int main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	int tt = 1; 
-   cin >> tt;
+   // cin >> tt;
 	for(int i=0;i<tt;i++) {
       // cout << "-- TEST CASE #" << i << " ----- \n";
 		solution();

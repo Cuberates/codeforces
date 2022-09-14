@@ -1,6 +1,5 @@
-/* Solution by Jack Nguyen @ $%U%$
- *
- * The solution was created on $%M%$ / $%D%$ / $%Y%$
+/* Solution by Jack Nguyen @ Cuberates
+ * The solution was created on 09 / 11 / 2022
  * */
 #include <bits/stdc++.h>
 
@@ -33,15 +32,32 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 #define debug(x...)
 #endif
 
-void solution() {   
 
+void solution () { 
+   long long N, D;
+   cin >> N >> D;
+   vector<long long> P(N);
+   for(auto &k : P) {
+      cin >> k;
+   }
+   sort(P.begin(), P.end());
+   // debug(P);
+   int last = N-1;
+   long long ans = 0, sum = P[last];
+   for(int i=0;i<N;i++) {
+      if(sum > D) {
+         ans++;
+         sum = 0;
+         last--;
+      } else sum += P[last];
+   }
+   cout << ans << "\n";
 }
-
-int main(){
+int main (){
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	int tt = 1; 
-   cin >> tt;
+   // cin >> tt;
 	for(int i=0;i<tt;i++) {
       // cout << "-- TEST CASE #" << i << " ----- \n";
 		solution();

@@ -1,6 +1,5 @@
-/* Solution by Jack Nguyen @ $%U%$
- *
- * The solution was created on $%M%$ / $%D%$ / $%Y%$
+/* Solution by Jack Nguyen @ Cuberates
+ * The solution was created on 09 / 11 / 2022
  * */
 #include <bits/stdc++.h>
 
@@ -33,15 +32,22 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 #define debug(x...)
 #endif
 
-void solution() {   
-
+void solution() { 
+   int N, M;
+   cin >> N >> M;
+   vector<int> A(N);
+   for(auto &k : A) cin >> k;
+   
+   long long C = sum (A);
+   // Two opposite point will have distance C/2
+   
 }
 
 int main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	int tt = 1; 
-   cin >> tt;
+   //cin >> tt;
 	for(int i=0;i<tt;i++) {
       // cout << "-- TEST CASE #" << i << " ----- \n";
 		solution();

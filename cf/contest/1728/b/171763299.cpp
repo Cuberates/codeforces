@@ -1,10 +1,10 @@
-/* Solution by Jack Nguyen @ $%U%$
- * The solution was created on $%M%$ / $%D%$ / $%Y%$
+/* Solution by Jack Nguyen @ Cuberates
+ * The solution was created on 09 / 11 / 2022
  * */
 #include <bits/stdc++.h>
 
 using namespace std;
-/* THE FOLLOWING CODE IS FOR DEBUGGING PURPOSES */ 
+
 void __print(int x) {cerr << x;}
 void __print(long x) {cerr << x;}
 void __print(long long x) {cerr << x;}
@@ -27,16 +27,20 @@ template <typename T, typename... V>
 void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v...);}
 
 #ifndef ONLINE_JUDGE
-#define debug(x...) cerr << "[" << #x << "] = ["; _print(x)
+#define debug(x...) cerr << "[" << #x << "] = ["; _print(x);
 #else
 #define debug(x...)
 #endif
-/* THE ABOVE CODE IS FOR DEBUGGING PURPOSES */ 
 
-void solution(){
-   
+void solution() { 
+   int n;
+   cin >> n;
+   vector<int> a(n);
+   iota(a.begin(), a.end(), 1);
+   for(int i=n&1;i<n-2;i+=2) swap(a[i], a[i+1]);
+   for(int &k : a) cout << k << " ";
+   cout << "\n";
 }
-
 int main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);

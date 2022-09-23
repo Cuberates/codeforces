@@ -1,10 +1,10 @@
-/* Solution by Jack Nguyen @ $%U%$
- * The solution was created on $%M%$ / $%D%$ / $%Y%$
+/* Solution by Jack Nguyen @ Cuberates
+ * The solution was created on 09 / 05 / 2022
  * */
 #include <bits/stdc++.h>
 
 using namespace std;
-/* THE FOLLOWING CODE IS FOR DEBUGGING PURPOSES */ 
+
 void __print(int x) {cerr << x;}
 void __print(long x) {cerr << x;}
 void __print(long long x) {cerr << x;}
@@ -31,17 +31,33 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 #else
 #define debug(x...)
 #endif
-/* THE ABOVE CODE IS FOR DEBUGGING PURPOSES */ 
 
-void solution(){
+void solution() { 
+   int N;
+   cin >> N;
+   vector<string> wrong(N), right(N); 
+   for(int i=0;i<N;i++) cin >> wrong[i];
+   for(int i=0;i<N;i++) cin >> right[i];
    
+   // Preprocessing
+   map<string,int> occ_wrong, occ_right;
+   for(string k : right) occ_right[k]++;
+   for(string k : wrong) occ_wrong[k]++;
+
+   // Compare the differences
+   int ans = 0;
+   for(auto x : occ_right) {
+      int k = occ_wrong[x.first];
+      if(x.second >= k) ans += x.second - k;
+   }
+   cout << ans << "\n";
 }
 
 int main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	int tt = 1; 
-   cin >> tt;
+   // cin >> tt;
 	for(int i=0;i<tt;i++) {
       // cout << "-- TEST CASE #" << i << " ----- \n";
 		solution();

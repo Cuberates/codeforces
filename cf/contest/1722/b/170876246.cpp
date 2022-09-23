@@ -1,10 +1,10 @@
-/* Solution by Jack Nguyen @ $%U%$
- * The solution was created on $%M%$ / $%D%$ / $%Y%$
+/* Solution by Jack Nguyen @ Cuberates
+ * The solution was created on 09 / 04 / 2022
  * */
 #include <bits/stdc++.h>
 
 using namespace std;
-/* THE FOLLOWING CODE IS FOR DEBUGGING PURPOSES */ 
+
 void __print(int x) {cerr << x;}
 void __print(long x) {cerr << x;}
 void __print(long long x) {cerr << x;}
@@ -31,10 +31,18 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 #else
 #define debug(x...)
 #endif
-/* THE ABOVE CODE IS FOR DEBUGGING PURPOSES */ 
 
-void solution(){
-   
+void solution() { 
+   int n; cin >> n;
+   string s1, s2;
+   cin >> s1 >> s2;
+   for(int i=0;i<n;i++) {
+      // change G to B
+      if(s1[i] == 'G') s1[i] = 'B';
+      if(s2[i] == 'G') s2[i] = 'B';
+   }
+   if(s1 == s2) cout << "YES \n";
+   else cout << "NO \n";
 }
 
 int main(){
@@ -43,7 +51,9 @@ int main(){
 	int tt = 1; 
    cin >> tt;
 	for(int i=0;i<tt;i++) {
-      // cout << "-- TEST CASE #" << i << " ----- \n";
+      #ifdef Cuberates
+		   // cout << "-- TEST CASE #" << i << " ----- \n";
+      #endif
 		solution();
 	}
 	return 0;

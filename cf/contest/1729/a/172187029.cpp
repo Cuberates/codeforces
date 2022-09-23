@@ -1,10 +1,11 @@
-/* Solution by Jack Nguyen @ $%U%$
- * The solution was created on $%M%$ / $%D%$ / $%Y%$
+/* Solution by Jack Nguyen @ Cuberates
+ *
+ * The solution was created on 09 / 15 / 2022
  * */
 #include <bits/stdc++.h>
 
 using namespace std;
-/* THE FOLLOWING CODE IS FOR DEBUGGING PURPOSES */ 
+
 void __print(int x) {cerr << x;}
 void __print(long x) {cerr << x;}
 void __print(long long x) {cerr << x;}
@@ -31,10 +32,15 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 #else
 #define debug(x...)
 #endif
-/* THE ABOVE CODE IS FOR DEBUGGING PURPOSES */ 
 
-void solution(){
-   
+void solution() {   
+   long long a, b, c;
+   cin >> a >> b >> c;
+   long long fi = abs (a - 1),
+             se = abs (b - c) + abs (c - 1);
+   if(fi == se) cout << 3 << "\n";
+   else if(fi < se) cout << 1 << "\n";
+   else cout << 2 << "\n";
 }
 
 int main(){

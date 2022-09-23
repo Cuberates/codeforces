@@ -1,10 +1,10 @@
-/* Solution by Jack Nguyen @ $%U%$
- * The solution was created on $%M%$ / $%D%$ / $%Y%$
+/* Solution by Jack Nguyen @ Cuberates
+ * The solution was created on 09 / 04 / 2022
  * */
 #include <bits/stdc++.h>
 
 using namespace std;
-/* THE FOLLOWING CODE IS FOR DEBUGGING PURPOSES */ 
+
 void __print(int x) {cerr << x;}
 void __print(long x) {cerr << x;}
 void __print(long long x) {cerr << x;}
@@ -31,10 +31,35 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 #else
 #define debug(x...)
 #endif
-/* THE ABOVE CODE IS FOR DEBUGGING PURPOSES */ 
 
-void solution(){
-   
+void solution() { 
+   int N, M;
+   cin >> N >> M;
+   vector<vector<int>> grid(N);
+   for(int i=0;i<N;i++) {
+      for(int j=0;j<M;j++) {
+         int x; cin >> x;
+         grid[i].push_back(x);
+      }
+   }
+   // find the coordinate of the maximum element
+   int max_x = 1, max_y = 1, cur_max = grid[0][0];
+   for(int i=0;i<N;i++) {
+      for(int j=0;j<M;j++) {
+         int val = grid[i][j];
+         if(val > cur_max) {
+            max_x = i+1;
+            max_y = j+1;
+            cur_max = val; 
+         }
+      }
+   }
+   int top = max_x; 
+   int bottom = N - max_x + 1; 
+   int left = max_y;
+   int right = M - max_y + 1;
+
+   cout << max(top, bottom) * max(left, right) << "\n";
 }
 
 int main(){

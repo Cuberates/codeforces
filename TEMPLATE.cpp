@@ -4,6 +4,7 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+
 /* THE FOLLOWING CODE IS FOR DEBUGGING PURPOSES */ 
 void __print(int x) {cerr << x;}
 void __print(long x) {cerr << x;}
@@ -33,11 +34,11 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 #endif
 /* THE ABOVE CODE IS FOR DEBUGGING PURPOSES */ 
 
-void solution(){
-   
+void solution () {
+
 }
 
-int main(){
+int main () {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	int tt = 1; 

@@ -1,5 +1,5 @@
-/* Solution by Jack Nguyen @ $%U%$
- * The solution was created on $%M%$ / $%D%$ / $%Y%$
+/* Solution by Jack Nguyen @ Cuberates
+ * The solution was created on 11 / 02 / 2022
  * */
 #include <bits/stdc++.h>
 
@@ -34,25 +34,29 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 #endif
 /* THE ABOVE CODE IS FOR DEBUGGING PURPOSES */ 
 
-void solution () {
-   int n;
-   cin >> n;
-   // The minimum max difference between any two elements is floor(x/2 + 1)
-   int x = n/2 + 1, j = 0;
-   for(int i=1;i<=n;i++) {
-      if(i%2!=0) {
-         cout << x + j << " ";
-         j++;
-      } else cout << j << " ";
-   }
-   cout << "\n";
+long long fact (long long n) {
+   if (n<=1) return 1;
+   else return n * fact(n-1);
 }
 
+long long choose (long long n, long long r) {
+   return (fact(n))/(fact(r)*fact(n-r));
+}
+
+void solution () {
+   long long n;
+   cin >> n;
+   vector<int> a(n);
+   for(int i=0;i<n;i++) cin >> a[i];
+   long long ans = 0;
+   cout << 6 * choose(10-n,2) << "\n";
+}
 
 int main () {
-	ios_base::sync_with_stdio(false); cin.tie(NULL);
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
 	int tt = 1; 
-   cin >> tt; // Read in the number of test cases
+   cin >> tt;
 	for(int i=0;i<tt;i++) {
       // cout << "-- TEST CASE #" << i << " ----- \n";
 		solution();

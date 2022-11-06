@@ -35,7 +35,7 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 /* THE ABOVE CODE IS FOR DEBUGGING PURPOSES */ 
 
 void solution () {
-
+	
 }
 
 int main () {

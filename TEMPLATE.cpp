@@ -19,7 +19,6 @@ void __print(char x) {cerr << '\'' << x << '\'';}
 void __print(const char *x) {cerr << '\"' << x << '\"';}
 void __print(const string &x) {cerr << '\"' << x << '\"';}
 void __print(bool x) {cerr << (x ? "true" : "false");}
-
 template<typename T, typename V> 
 void __print(const pair<T, V> &x) {cerr << '{'; __print(x.first); cerr << ','; __print(x.second); cerr << '}';}
 template<typename T> 
@@ -35,7 +34,7 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 /* THE ABOVE CODE IS FOR DEBUGGING PURPOSES */ 
 
 void solution () {
-	
+
 }
 
 int main () {

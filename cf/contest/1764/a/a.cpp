@@ -1,5 +1,5 @@
-/* Solution by Jack Nguyen @ $%U%$
- * $%M%$ / $%D%$ / $%Y%$
+/* Solution by Jack Nguyen @ Cuberates
+ * 12 / 09 / 2022
  * */
 #include <bits/stdc++.h>
 using namespace std;
@@ -17,5 +17,10 @@ int main () {
 /* ---- SOLUTION GOES HERE ---- */
 
 void mySolution () { 
-   return 0;
+   int N;
+   cin >> N;
+   vector<int> A(N);
+   for(int &k : A) cin >> k;
+   cout << 1 << " " << N << "\n";   
+
 }

@@ -17,5 +17,5 @@ int main () {
 /* ---- SOLUTION GOES HERE ---- */
 
 void mySolution () { 
-   return 0;
+
 }
